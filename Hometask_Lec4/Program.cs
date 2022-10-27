@@ -6,7 +6,8 @@ public class Program
 {
     static void Main()
     {
-        Task1();
+        //Task1();
+        Task2();
     }
     private static void Task1()
     {
@@ -28,25 +29,20 @@ public class Program
         }
     }
 
-    //   private static void Task2()
-    //   {
-    //   Console.WriteLine("Vvedite chislo");                    // ask user to enter a number
-    //       string s = Console.ReadLine();                          // user enters a number
-    //   bool isNumeric = int.TryParse(s, out int n);            // parsing the entered value into numeric variable
-    //        if ((isNumeric) && (n >= 0))                            // checking that a positiv number was entered
-    //       {
+       private static void Task2()
+       {
+        byte i = 1;
+        while (i <= 10)                                          // do the operetions untill counter is less than 10
+        {
+            Console.WriteLine("3 * " + i + " = " + (3 * i));     // multiply three by counter and output the value
+            i++;                                                 // increment the counter
+        }
+       }
 
-    //       }
-    //       else                                                    
-    //       {
-    //           Console.WriteLine("Invalid input data");            // display error message if invalid data was enered
-    //       }
-    //   }
-
-    //   private static void Task3()
-    //   {
-    //   Console.WriteLine("Vvedite chislo");                    // ask user to enter a number
-    //       string s = Console.ReadLine();                          // user enters a number
+   //    private static void Task3()
+   //    {
+   //    Console.WriteLine("Vvedite chislo");                    // ask user to enter a number
+   //        string s = Console.ReadLine();                          // user enters a number
     //   bool isNumeric = int.TryParse(s, out int n);            // parsing the entered value into numeric variable
     //        if ((isNumeric) && (n >= 0))                            // checking that a positiv number was entered
     //       {
