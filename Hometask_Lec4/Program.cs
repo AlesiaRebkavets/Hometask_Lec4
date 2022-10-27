@@ -8,13 +8,13 @@ public class Program
     {
         //Task1();
         //Task2();
-
+        Task3();
         //Task4();
 
 
 
 
-        Task9();
+        //Task9();
     }
     private static void Task1()
     {
@@ -46,20 +46,16 @@ public class Program
         }
        }
 
- //      private static void Task3()
- //      {
- //      Console.WriteLine("Vvedite chislo");                    // ask user to enter a number
- //          string s = Console.ReadLine();                          // user enters a number
- //      bool isNumeric = int.TryParse(s, out int n);            // parsing the entered value into numeric variable
- //           if ((isNumeric) && (n >= 0))                            // checking that a positiv number was entered
- //          {
-
- //          }
- //          else                                                    
- //          {
- //              Console.WriteLine("Invalid input data");            // display error message if invalid data was enered
- //          }
- //      }
+       private static void Task3() 
+       {
+        byte[] arr = new byte[5] {3, 5, 9, 8, 15 };               // initialisation of array
+        short m = 1;
+        foreach (byte b in arr)                                   // multiply each array element by variable with initial value equal to '1'
+        {
+            m *= b;
+        }
+        Console.WriteLine("Otvet: " + m);                         // output of the calculated value
+    }
 
        private static void Task4()
        {
@@ -146,9 +142,7 @@ public class Program
             {
                 Console.WriteLine("***********");                        
             }
-            else break;
-                
-            
+            else break;           
         }
 
        }
