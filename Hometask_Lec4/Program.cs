@@ -11,8 +11,8 @@ public class Program
         //Task2();
         //Task3();
         //Task4();
-        Task5();
-
+        //Task5();
+        Task6();
 
 
         //Task9();
@@ -72,7 +72,7 @@ public class Program
 
        private static void Task5()
        {
-        string[] arr = new string[10];                             // initialisation of variables
+        string[] arr = new string[10];                             // initialisation of array
         for (byte i = 0; i < 10; i++)                              
         {
             arr[i] = Console.ReadLine();                           // input of array elements from console
@@ -87,20 +87,26 @@ public class Program
         }
        }
 
-    //   private static void Task6()
-    //   {
-    //   Console.WriteLine("Vvedite chislo");                    // ask user to enter a number
-    //       string s = Console.ReadLine();                          // user enters a number
-    //   bool isNumeric = int.TryParse(s, out int n);            // parsing the entered value into numeric variable
-    //        if ((isNumeric) && (n >= 0))                            // checking that a positiv number was entered
-    //       {
-
-    //       }
-    //       else                                                    
-    //       {
-    //           Console.WriteLine("Invalid input data");            // display error message if invalid data was enered
-    //       }
-    //   }
+       private static void Task6()
+       {
+        int[] arr = new int[10];                                      // initialisation of array
+        Console.WriteLine("Vvedite chisla");
+        for (byte i = 0; i < 10; i++)
+        {
+            string s = Console.ReadLine();                           // user enters a number
+            bool isNumeric = int.TryParse(s, out arr[i]);            // parsing the entered value into numeric variable
+            if ((!isNumeric))                                        // checking that a number was entered
+            { 
+                Console.WriteLine("Invalid input data");             // display error message and break if string was enered
+                break;
+            }
+            if (i == 9)                                              // calculating sum of the the first and the last one elements if 'break' did not work
+            {
+                Console.WriteLine("Summa pervogo i poslednego elementov ravna " + (arr[0] + arr[9]));  
+            }
+        }
+        
+    }
 
     //   private static void Task7()
     //   {
