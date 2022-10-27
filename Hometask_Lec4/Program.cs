@@ -9,7 +9,12 @@ public class Program
         //Task1();
         //Task2();
 
-        Task4();
+        //Task4();
+
+
+
+
+        Task9();
     }
     private static void Task1()
     {
@@ -128,19 +133,24 @@ public class Program
     //       }
     //   }
 
-    //   private static void Task9()
-    //   {
-    //   Console.WriteLine("Vvedite chislo");                    // ask user to enter a number
-    //       string s = Console.ReadLine();                          // user enters a number
-    //   bool isNumeric = int.TryParse(s, out int n);            // parsing the entered value into numeric variable
-    //        if ((isNumeric) && (n >= 0))                            // checking that a positiv number was entered
-    //       {
+       private static void Task9()
+       {
+        byte[] arr = new byte[10] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};        // initialisation of array
 
-    //       }
-    //       else                                                    
-    //       {
-    //           Console.WriteLine("Invalid input data");            // display error message if invalid data was enered
-    //       }
-    //   }
+        for (int i = 1; i<=10; i++) {
+            foreach (byte b in arr)                                       // all array elements are multiplied by a value of counter from the first cycle
+            {
+                Console.WriteLine(i + " * " + b + " = " + (i * b));       // output of the calculated value
+            }
+            if (i < 10)                                                   // added a delimiter for all the tables except the last one
+            {
+                Console.WriteLine("***********");                        
+            }
+            else break;
+                
+            
+        }
+
+       }
 
 }
