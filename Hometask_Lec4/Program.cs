@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization.Formatters;
 using System.Security.Cryptography;
 
@@ -8,9 +9,9 @@ public class Program
     {
         //Task1();
         //Task2();
-        Task3();
+        //Task3();
         //Task4();
-
+        Task5();
 
 
 
@@ -69,20 +70,22 @@ public class Program
         Console.WriteLine("Otvet: " + i);                          // output of the calculated value
     }
 
-    //   private static void Task5()
-    //   {
-    //   Console.WriteLine("Vvedite chislo");                    // ask user to enter a number
-    //       string s = Console.ReadLine();                          // user enters a number
-    //   bool isNumeric = int.TryParse(s, out int n);            // parsing the entered value into numeric variable
-    //        if ((isNumeric) && (n >= 0))                            // checking that a positiv number was entered
-    //       {
-
-    //       }
-    //       else                                                    
-    //       {
-    //           Console.WriteLine("Invalid input data");            // display error message if invalid data was enered
-    //       }
-    //   }
+       private static void Task5()
+       {
+        string[] arr = new string[10];                             // initialisation of variables
+        for (byte i = 0; i < 10; i++)                              
+        {
+            arr[i] = Console.ReadLine();                           // input of array elements from console
+            //string s = String.ToLower(arr[i]);  ПРОБОВАЛА НЕ УЧИТЫВАТЬ РЕГИСТР, НО РУГАЕТСЯ НА 'arr[i]'. ПОДСКАЖИ ПЛИЗ В ЧЕМ ОШИБКА
+            if (arr[i] == "Hello")                                 // determine if 'Hello' was entered
+            {
+                Console.WriteLine("Labas!");                      
+                break;                                             // end the cycle if 'Hello' was entered
+            }
+            if (i == 9)                                            // output if 'Hello' was not entered
+            { Console.WriteLine("'Hello' was not entered but Labas anyway :)"); }
+        }
+       }
 
     //   private static void Task6()
     //   {
