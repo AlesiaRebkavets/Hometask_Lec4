@@ -9,12 +9,12 @@ public class Program
     {
         //Task1();
         //Task2();
-        Task3();
+        //Task3();
         //Task4();
         //Task5();
         //Task6();
         //Task7();
-        //Task8();
+        Task8();
         //Task9();
     }
     private static void Task1()
@@ -158,7 +158,7 @@ public class Program
         }
         for (byte k = 0; k < 10; k++)
         {
-            for (byte j = 0; j < 10 - k; j++)
+            for (byte j = 0; j < 9 - k; j++)
             {
                 if (arr[j + 1] < arr[j])                         //И ОПЯТЬ НЕ РАБОТАЕТ
                 {
@@ -168,7 +168,8 @@ public class Program
                 }
             }
         }
-
+        Console.WriteLine("*****************");
+        Console.WriteLine("***** Otvet *****");
         foreach (int k in arr)
         {
             Console.WriteLine(k);
