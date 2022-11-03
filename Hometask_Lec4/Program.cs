@@ -11,9 +11,9 @@ public class Program
         //Task2();
         //Task3();
         //Task4();
-        Task5();
+        //Task5();
         //Task6();
-        //Task7();
+        Task7();
         //Task8();
         //Task9();
     }
@@ -126,12 +126,12 @@ public class Program
         }
         else
         {
-            max = arr[0]; min = arr[0]; max_i = 0; min_i = 0;   // initial values of min, min_i, max, max_i variables
+            max = min = arr[0]; max_i = min_i = 0;   // initial values of min, min_i, max, max_i variables
             for (byte i = 1; i < 10; i++)
             {
                 s = Console.ReadLine();                           // user enters a number
                 isNumeric = int.TryParse(s, out arr[i]);            // parsing the entered value into numeric variable
-                if ((!isNumeric))                                        // checking that a number was entered
+                if (!isNumeric)                                        // checking that a number was entered
                 {
                     Console.WriteLine("Invalid input data");             // display error message and break if string was enered
                     break;
@@ -159,7 +159,7 @@ public class Program
         }
         for (byte k = 0; k < 10; k++)
         {
-            for (byte j = 0; j < 9 - k; j++)
+            for (byte j = 1; j < 10 - k; j++)
             {
                 if (arr[j + 1] < arr[j])                         //И ОПЯТЬ НЕ РАБОТАЕТ
                 {
