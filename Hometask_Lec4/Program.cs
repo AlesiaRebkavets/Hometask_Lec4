@@ -7,9 +7,9 @@ public class Program
 {
     static void Main()
     {
-        Task1();
+        //Task1();
         //Task2();
-        //Task3();
+        Task3();
         //Task4();
         //Task5();
         //Task6();
@@ -49,7 +49,7 @@ public class Program
 
     private static void Task3()
     {
-        byte[] arr = new byte[5] { 3, 5, 9, 8, 15 };               // initialisation of array
+        byte[] arr = new byte[] { 3, 5, 9, 8, 15 };               // initialisation of array
         short m = 1;
         foreach (byte b in arr)                                   // multiply each array element by variable with initial value equal to '1'
         {
