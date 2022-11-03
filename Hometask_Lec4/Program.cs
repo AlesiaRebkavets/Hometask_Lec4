@@ -7,13 +7,13 @@ public class Program
 {
     static void Main()
     {
-        //Task1();
+        Task1();
         //Task2();
         //Task3();
         //Task4();
         //Task5();
         //Task6();
-        Task7();
+        //Task7();
         //Task8();
         //Task9();
     }
@@ -25,9 +25,9 @@ public class Program
         if ((isNumeric) && (n >= 0))                            // checking that a positiv number was entered
         {
             int sum = 0;
-            for (int i = n; i > 0; i--)                         // adding counter to the general sum 
+            while (n > 0)                         // adding counter to the general sum 
             {                                                                 // and decrementing it by 1 each iteration
-                sum += i;
+                sum += n--;
             }
             Console.WriteLine("Otvet raven " + sum);            // output of the calculated value
         }
@@ -76,12 +76,12 @@ public class Program
         for (byte i = 0; i < 10; i++)
         {
             arr[i] = Console.ReadLine();                           // input of array elements from console
-           // string s = String.ToLower(arr[i]);  ПРОБОВАЛА НЕ УЧИТЫВАТЬ РЕГИСТР, НО РУГАЕТСЯ НА 'arr[i]'. ПОДСКАЖИ ПЛИЗ В ЧЕМ ОШИБКА
-            if (arr[i] == "Hello")                                 // determine if 'Hello' was entered
-            {
-                Console.WriteLine("Labas!");
-                break;                                             // end the cycle if 'Hello' was entered
-            }
+            //if (arr[i].ToLower == "hello")    
+            //    if (String.Compare(String.ToLower(arr[i], "hello"))                          // determine if 'Hello' was entered
+           // {
+           //     Console.WriteLine("Labas!");
+           //     break;                                             // end the cycle if 'Hello' was entered
+           // }
             if (i == 9)                                            // output if 'Hello' was not entered
             { Console.WriteLine("'Hello' was not entered but Labas anyway :)"); }
         }
@@ -159,8 +159,8 @@ public class Program
         for (byte k = 0; k < 10; k++)
         {
             for (byte j = 0; j < 10 - k; j++)
-            {                    
-                if (arr[j + 1] < arr[j])           //И ОПЯТЬ НЕ РАБОТАЕТ
+            {
+                if (arr[j + 1] < arr[j])                         //И ОПЯТЬ НЕ РАБОТАЕТ
                 {
                     int c = arr[j];
                     arr[j] = arr[j + 1];
