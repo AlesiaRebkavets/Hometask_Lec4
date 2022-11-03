@@ -11,10 +11,10 @@ public class Program
         //Task2();
         //Task3();
         //Task4();
-        //Task5();
+        Task5();
         //Task6();
         //Task7();
-        Task8();
+        //Task8();
         //Task9();
     }
     private static void Task1()
@@ -73,15 +73,16 @@ public class Program
     private static void Task5()
     {
         string[] arr = new string[10];                             // initialisation of array
+        string s = "hello";
         for (byte i = 0; i < 10; i++)
+           
         {
             arr[i] = Console.ReadLine();                           // input of array elements from console
-            //if (arr[i].ToLower == "hello")    
-            //    if (String.Compare(String.ToLower(arr[i], "hello"))                          // determine if 'Hello' was entered
-           // {
-           //     Console.WriteLine("Labas!");
-           //     break;                                             // end the cycle if 'Hello' was entered
-           // }
+            if (arr[i].ToLower() == "hello")                        // determine if 'Hello' was entered
+            {
+                Console.WriteLine("Labas!");
+                break;                                             // end the cycle if 'Hello' was entered
+            }
             if (i == 9)                                            // output if 'Hello' was not entered
             { Console.WriteLine("'Hello' was not entered but Labas anyway :)"); }
         }
