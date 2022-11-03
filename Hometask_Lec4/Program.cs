@@ -13,8 +13,8 @@ public class Program
         //Task4();
         //Task5();
         //Task6();
-        //Task7();
-        Task8();
+        Task7();
+        //Task8();
         //Task9();
     }
     private static void Task1()
@@ -76,7 +76,7 @@ public class Program
         for (byte i = 0; i < 10; i++)
         {
             arr[i] = Console.ReadLine();                           // input of array elements from console
-            //string s = String.ToLower(arr[i]);  ПРОБОВАЛА НЕ УЧИТЫВАТЬ РЕГИСТР, НО РУГАЕТСЯ НА 'arr[i]'. ПОДСКАЖИ ПЛИЗ В ЧЕМ ОШИБКА
+           // string s = String.ToLower(arr[i]);  ПРОБОВАЛА НЕ УЧИТЫВАТЬ РЕГИСТР, НО РУГАЕТСЯ НА 'arr[i]'. ПОДСКАЖИ ПЛИЗ В ЧЕМ ОШИБКА
             if (arr[i] == "Hello")                                 // determine if 'Hello' was entered
             {
                 Console.WriteLine("Labas!");
@@ -114,33 +114,39 @@ public class Program
         Console.WriteLine("Vvedite chisla");
         int max;
         int min;
-        byte max_i = 0;
-        byte min_i = 9;
-        for (byte i = 0; i < 10; i++)
+        byte max_i;
+        byte min_i;
+        string s = Console.ReadLine();                           // user enters a number
+        bool isNumeric = int.TryParse(s, out arr[0]);            // parsing the entered value into numeric variable
+        if ((!isNumeric))                                        // checking that a number was entered
         {
-            string s = Console.ReadLine();                           // user enters a number
-            bool isNumeric = int.TryParse(s, out arr[i]);            // parsing the entered value into numeric variable
-            if ((!isNumeric))                                        // checking that a number was entered
-            {
-                Console.WriteLine("Invalid input data");             // display error message and break if string was enered
-                break;
-            }
-            if (i == 1) { max = arr[i]; min = arr[i]; }              // initial values of min and max variables
-                                                                     //          if (arr[i] > max) { max = arr[i]; max_i = i; }           // finding max value
-                                                                     //          if (arr[i] < min) { min = arr[i]; min_i = i; }           // finding min value
-            if (i == 9) { Console.WriteLine("Otvet: " + (max_i + min_i)); }
+            Console.WriteLine("Invalid input data");  
+            
         }
-
-        // КОД НЕ РАБОТАЕТ, НЕ МОГУ ПОНЯТЬ В ЧЕМ ПРИЧИНА, ПОЧЕМУ РУГАЕТСЯ НА ПЕРЕМЕННЫЕ MIN И MAX
-        // ПОХОЖЕ НА ОШИБКУ КАК В TASK 5, ПОДСКАЖИ, ПОЖАЛУЙСТА, В ЧЕМ ПРИЧИНА
-
+        else
+        {
+            max = arr[0]; min = arr[0]; max_i = 0; min_i = 0;   // initial values of min, min_i, max, max_i variables
+            for (byte i = 1; i < 10; i++)
+            {
+                s = Console.ReadLine();                           // user enters a number
+                isNumeric = int.TryParse(s, out arr[i]);            // parsing the entered value into numeric variable
+                if ((!isNumeric))                                        // checking that a number was entered
+                {
+                    Console.WriteLine("Invalid input data");             // display error message and break if string was enered
+                    break;
+                }
+                if (arr[i] > max) { max = arr[i]; max_i = i; }           // finding max value
+                if (arr[i] < min) { min = arr[i]; min_i = i; }           // finding min value
+                if (i == 9) { Console.WriteLine("Otvet: " + (max_i + min_i)); }
+            }
+        }
     }
 
     private static void Task8()
     {
         int[] arr = new int[10];                                      // initialisation of array
         Console.WriteLine("Vvedite chisla");                          // ask user to enter a number
-        for (byte i = 0; i > 10; i++)
+        for (byte i = 0; i < 10; i++)
         {
             string s = Console.ReadLine();                          // user enters a number
             bool isNumeric = int.TryParse(s, out arr[i]);            // parsing the entered value into numeric variable
@@ -153,7 +159,7 @@ public class Program
         for (byte k = 0; k < 10; k++)
         {
             for (byte j = 0; j < 10 - k; j++)
-            {
+            {                    
                 if (arr[j + 1] < arr[j])           //И ОПЯТЬ НЕ РАБОТАЕТ
                 {
                     int c = arr[j];
